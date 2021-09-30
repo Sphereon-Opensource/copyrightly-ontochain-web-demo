@@ -28,10 +28,7 @@
     /* Print names of generated files part of the compilation. */,
     "listFiles": false
     /* Print names of files part of the compilation. */,
-    "pretty": true,
-    "types": [
-      "node"
-    ]
+    "pretty": true
   },
   "include": [
     "src/**/*",
