@@ -1,0 +1,26 @@
+{
+  "name": "@types/onto-web-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "install-shared-types": "cd ontochain-demo-shared-types && yarn install",
+    "install-server": "cd ontochain-demo-server && yarn install",
+    "install-client": "cd ontochain-demo-client && yarn install",
+    "install-all": "yarn install-shared-types && yarn install-server && yarn install-client",
+    "start-server": "cd ontochain-demo-server && yarn run start",
+    "start-client": "cd ontochain-demo-client && yarn run start",
+    "build-types": "cd ontochain-demo-shared-types && yarn run build",
+    "build-client": "cd ontochain-demo-client && yarn run build",
+    "build": "yarn build-types && yarn build-client",
+    "start": "concurrently \"yarn start-server\" \"yarn start-client\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "dotenv-flow": "^3.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0"
+  }
+}
