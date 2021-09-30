@@ -45,7 +45,7 @@ export default class Nav extends ProtectedResource<NavProps> {
     if (this.isAuthenticated()) {
       return <>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#"
+          <a className="nav-link dropdown-toggle" href="/authorship"
           >Authorship</a
           >
         </li>
