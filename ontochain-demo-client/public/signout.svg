@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="138"
+   height="35"
+   viewBox="0 0 138 35"
+   fill="none"
+   version="1.1"
+   id="svg530"
+   sodipodi:docname="signout.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview532"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     width="189px"
+     inkscape:zoom="4.4921053"
+     inkscape:cx="39.40246"
+     inkscape:cy="0.55653193"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="3832"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg530" />
+  <path
+     d="m 0.53589355,10 c 0,-5.52285 3.24753005,-10 7.25356535,-10 H 138.05914 v 24.5415 c 0,5.5228 -3.24742,10 -7.25356,10 H 0.53589355 Z"
+     fill="#000000"
+     id="path9"
+     style="stroke-width:0.851679" />
+  <defs
+     id="defs528">
+    <clipPath
+       id="clip0">
+      <rect
+         width="19"
+         height="21"
+         fill="#ffffff"
+         transform="translate(8.99973,6.77074)"
+         id="rect525"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <text
+     xml:space="preserve"
+     style="font-size:13.3333px;line-height:1.25;font-family:sans-serif;fill:#ffffff"
+     x="42.630344"
+     y="21.593437"
+     id="text26566"><tspan
+       sodipodi:role="line"
+       id="tspan26564"
+       x="42.630344"
+       y="21.593437">Sign out</tspan></text>
+</svg>
