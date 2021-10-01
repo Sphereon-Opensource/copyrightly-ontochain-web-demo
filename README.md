@@ -1,6 +1,12 @@
-# Under Construction :construction:
+<h2 align="center">
+  <br>
+  <a href="https://www.sphereon.com"><img src="https://sphereon.com/content/themes/sphereon/assets/img/logo.svg" alt="Sphereon" width="400"></a>
+  <br>Gimly / Copyrightly Ontochain Demo Website      
+  <br>
+  <br>
+</h2>
 
-#### This is a demo website to test and showcase the ["Sphereon Self Issued OpenID Provider v2 (SIOP)" library](https://github.com/Sphereon-Opensource/did-auth-siop)
+#### This is a demo website to test and showcase the ["Sphereon Self Issued OpenID Provider v2 (SIOP)" library](https://github.com/Sphereon-Opensource/did-auth-siop) using a style template of the [Copyrightly](https://copyrightly.rhizomik.net/) website.
 
 ### Getting started
 
@@ -18,9 +24,9 @@ RP_PRIVATE_HEX_KEY=850e54b92c6291a1ff7b8c3ef30e032571ed77c9e5c78b1cd6ee5fec4fea9
 AUTH_REQUEST_EXPIRES_AFTER_SEC=300
 MOCK_AUTH_RESPONSE=false
 ```
+
 Except for the IP address this is a valid configuration to test with. You will need to replace it with the public IP interface/address where this
 server will be running and make sure it is accessible from your phone and the port is open in the firewall.
-
 
 #### Build & start
 
