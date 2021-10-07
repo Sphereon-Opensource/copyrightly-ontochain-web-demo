@@ -1,6 +1,6 @@
 {
   "name": "@spostma/ontochain-demo-shared-types",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared types between modules",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,9 +11,7 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "files": [
     "dist"
   ]
