@@ -16,11 +16,15 @@ export class StateMapping {
 
 
 export class AuthResponse {
-  constructor(userDID: string, userName: string) {
+  constructor(userDID: string) {
     this.userDID = userDID;
-    this.userName = userName;
   }
   userDID: string
-  userName: string
+  firstName?: string
+  lastName?: string
+  youtubeChannelName?: string
+  youtubeChannelId?: string
+  youtubeChannelURL?: string
+  youtubeChannelCreationDate?: number
   token?: string
 }
