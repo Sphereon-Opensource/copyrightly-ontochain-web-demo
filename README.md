@@ -1,12 +1,11 @@
-<h2 align="center">
-  <br>
-  <a href="https://www.sphereon.com"><img src="https://sphereon.com/content/themes/sphereon/assets/img/logo.svg" alt="Sphereon" width="400"></a>
+<h2 style="text-align: center; vertical-align: middle">
+  <center><a href="https://www.gimly.io/"><img src="https://avatars.githubusercontent.com/u/64525639?s=200&v=4" alt="Gimly" width="120" style="vertical-align: middle"></a> &nbsp;and &nbsp; <a href="https://copyrightly.rhizomik.net"><img src="https://copyrightly.rhizomik.net/assets/copyrightly.svg" alt="Copyrightly" width="250" style="vertical-align: middle" ></a></center>
   <br>Gimly / Copyrightly Ontochain Demo Website      
   <br>
   <br>
 </h2>
 
-#### This is a demo website to test and showcase the ["Sphereon Self Issued OpenID Provider v2 (SIOP)" library](https://github.com/Sphereon-Opensource/did-auth-siop) using a style template of the [Copyrightly](https://copyrightly.rhizomik.net/) website.
+#### This is a demo website to test and showcase of the ["Self Issued OpenID Provider v2 (SIOP)" library](https://github.com/Sphereon-Opensource/did-auth-siop) using a style template of the [Copyrightly](https://copyrightly.rhizomik.net/) website.
 
 ### Getting started
 
