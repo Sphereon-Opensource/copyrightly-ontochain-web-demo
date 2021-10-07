@@ -7,7 +7,11 @@ export interface NavProps extends ProtectedResourceProps {
   signInOutButtons: JSX.Element
 }
 
-export default class Nav extends ProtectedResource<NavProps> {
+export interface NavState {
+
+}
+
+export default class Nav extends ProtectedResource<NavProps, NavState> {
 
   render() {
     return (

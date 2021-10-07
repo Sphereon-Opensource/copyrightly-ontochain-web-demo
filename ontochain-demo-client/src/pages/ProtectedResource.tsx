@@ -6,7 +6,7 @@ export interface ProtectedResourceProps {
     authResponse: AuthResponse
 }
 
-export default class ProtectedResource<T extends ProtectedResourceProps> extends Component<T, {}> {
+export default class ProtectedResource<T extends ProtectedResourceProps, S> extends Component<T, S> {
 
     protected isAuthenticated(): boolean {
         return this.props.authResponse && !isBlank(this.props.authResponse.userDID)
