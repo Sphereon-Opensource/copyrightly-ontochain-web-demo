@@ -24,10 +24,7 @@ ontochain-demo-shared-types/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-ontochain-demo-client/yarn.lock
-ontochain-demo-server/yarn.lock
-ontochain-demo-shared-types/yarn.lock
-yarn.lock
+
 
 .idea
 

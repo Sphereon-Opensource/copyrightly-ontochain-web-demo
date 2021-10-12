@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import GimlyIDQRCode, {QRContent, QRMode, QRType} from "@gimly-blockchain/gimlyid-qr-code-generator"
 import axios from "axios"
 import Loader from "react-loader-spinner"
-import {AuthResponse, QRVariables, StateMapping} from "@spostma/ontochain-demo-shared-types"
+import {AuthResponse, QRVariables, StateMapping} from "@gimly-blockchain/copyrightly-onto-demo-shared-types"
 
 export type AuthenticationQRProps = {
   onAuthRequestCreated: () => void

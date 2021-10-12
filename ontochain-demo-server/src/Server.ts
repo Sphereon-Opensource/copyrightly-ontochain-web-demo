@@ -4,7 +4,7 @@ import {CookieOptions, Response} from "express/ts4.0"
 import cookieParser from "cookie-parser"
 import ExpiryMap from "expiry-map"
 import shortUUID from "short-uuid"
-import {AuthResponse, QRVariables, StateMapping} from "@spostma/ontochain-demo-shared-types";
+import {AuthResponse, QRVariables, StateMapping} from "@gimly-blockchain/copyrightly-onto-demo-shared-types";
 import * as core from "express-serve-static-core";
 import {PresentationDefinition, Rules} from '@sphereon/pe-models';
 import {RP} from "@sphereon/did-auth-siop";
@@ -166,8 +166,11 @@ class Server {
   }
 
   private buildPresentationDefinition() {
-    const presentationDefinitions: PresentationDefinition = {
-      id: "9449e2db-791f-407c-b086-c21cc677d2e0",
+    const presentationDefinitions: PresentationDefinition =
+
+    {
+      id: "aa49e2db-791f-407c-b086-c21cc677d2a3",
+      purpose: "You can login if you are a Youtube channel owner",
       submission_requirements: [{
         name: "YoutubeChannelOwner",
         rule: Rules.Pick,
@@ -207,8 +210,8 @@ class Server {
 
     if (stateMapping.pollCount > 2) {
       console.log("Poll mockup sending AuthResponse")
-      const authResponse: AuthResponse = new AuthResponse("did:test-user")
-      authResponse.userDID =
+      const authResponse: AuthResponse = new AuthResponse()
+      authResponse.userDID ="did:test-user"
       authResponse.firstName = "Mr."
       authResponse.lastName = "Test"
       response.statusCode = 200

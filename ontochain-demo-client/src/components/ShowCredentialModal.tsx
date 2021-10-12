@@ -1,6 +1,6 @@
 import {Button, Col, Container, Image, Modal, Row} from "react-bootstrap"
 import {Component} from "react"
-import {AuthResponse} from "@spostma/ontochain-demo-shared-types"
+import {AuthResponse} from "@gimly-blockchain/copyrightly-onto-demo-shared-types"
 
 export type CredentialsModalProps = {
     show?: boolean
@@ -9,16 +9,18 @@ export type CredentialsModalProps = {
 }
 
 
-export default class CredentialsModal extends Component<CredentialsModalProps> {
+export default class ShowCredentialModal extends Component<CredentialsModalProps> {
 
-    private readonly scanText = "Please scan this QR code now in your authenticator app.";
+    private readonly scanText = "Please scan this QR code now in your app.";
     private readonly authText = "Please approve the authentication request in your app.";
 
     constructor(props: CredentialsModalProps) {
         super(props)
     }
 
+
     render() {
+
         const authResponse = this.props.authResponse;
         return <Modal show={this.props.show} animation={false}>
             <Modal.Header style={{
@@ -26,7 +28,7 @@ export default class CredentialsModal extends Component<CredentialsModalProps> {
                 justifyContent: "center",
                 alignItems: "center",
             }}>
-                <Modal.Title>YouTube credentials</Modal.Title>
+                <Modal.Title>Authorship Evidence</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
@@ -41,7 +43,12 @@ export default class CredentialsModal extends Component<CredentialsModalProps> {
                         <Col className="d-flex justify-content-center" style={{paddingTop: "10px"}}>
                             <table>
                                 <tr>
-                                    <td>Channel Name</td>
+                                    <td>Channel</td>
+                                    <td><a href={authResponse.youtubeChannelURL} target="_blank"><img src={authResponse.youtubeChannelImageURL}/></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
                                     <td><a href={authResponse.youtubeChannelURL} target="_blank">{authResponse.youtubeChannelName}</a>
                                     </td>
                                 </tr>
@@ -49,10 +56,7 @@ export default class CredentialsModal extends Component<CredentialsModalProps> {
                                     <td>Channel ID</td>
                                     <td>{authResponse.youtubeChannelId}</td>
                                 </tr>
-                                <tr>
-                                    <td>Channel Creation Date</td>
-                                    <td>{authResponse.youtubeChannelCreationDate}</td>
-                                </tr>
+
                                 <tr>
                                     <td>Owner First Name</td>
                                     <td>{authResponse.firstName}</td>

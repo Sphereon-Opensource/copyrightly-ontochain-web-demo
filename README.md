@@ -32,6 +32,7 @@ server will be running and make sure it is accessible from your phone and the po
 From the root directory
 
 - yarn global add concurrently
+- yarn global add typescript
 - yarn global add ts-node
 - yarn install-all
 - yarn build-types

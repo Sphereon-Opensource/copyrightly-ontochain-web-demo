@@ -1,4 +1,4 @@
-import {AuthResponse} from "@spostma/ontochain-demo-shared-types"
+import {AuthResponse} from "@gimly-blockchain/copyrightly-onto-demo-shared-types"
 import React, {Component} from "react"
 import {isBlank} from "underscore.string"
 

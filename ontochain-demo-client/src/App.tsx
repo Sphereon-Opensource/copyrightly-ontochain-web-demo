@@ -3,7 +3,7 @@ import React, {Component} from "react"
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Button from "react-bootstrap/Button"
 import AuthenticationModal from "./components/AuthenticationModal"
-import {AuthResponse} from "@spostma/ontochain-demo-shared-types"
+import {AuthResponse} from "@gimly-blockchain/copyrightly-onto-demo-shared-types"
 import jsonpack from "jsonpack"
 import Nav from "./components/Nav";
 import Landing from "./pages/Landing";

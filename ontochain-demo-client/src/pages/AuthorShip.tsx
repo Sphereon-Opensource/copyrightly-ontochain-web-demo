@@ -1,17 +1,19 @@
 import React from "react"
 import ProtectedResource, {ProtectedResourceProps} from "./ProtectedResource";
 import {Container} from "react-bootstrap";
-import {AuthResponse} from "@spostma/ontochain-demo-shared-types";
-import CredentialsModal from "../components/CredentialsModal";
+import {AuthResponse} from "@gimly-blockchain/copyrightly-onto-demo-shared-types";
+import ProofModal from "../components/ProofModal";
+import ShowCredentialModal from "../components/ShowCredentialModal";
 
 
 export interface AuthorShipState {
-    showCredentialsModal?: boolean
+    showOwnerCredentialModal?: boolean
+    showProofCredentialModal?: boolean
 }
 
 export default class AuthorShip extends ProtectedResource<ProtectedResourceProps, AuthorShipState> {
 
-    state: AuthorShipState = {showCredentialsModal: false}
+    state: AuthorShipState = {showOwnerCredentialModal: false, showProofCredentialModal: false}
 
     render() {
         if (this.isAuthenticated()) {
@@ -190,7 +192,7 @@ export default class AuthorShip extends ProtectedResource<ProtectedResourceProps
                                     className="card-text"
                                     href="https://rinkeby.etherscan.io/tx/0x90f2d96d6781a84ebb1c3d2cc8c6874c39a60a3055d35f9651035faec52136a6"
                                 >
-                                    Jun 8, 53691, 11:36:40 AM</a
+                                    Sept 20, 2021, 08:47:37 PM</a
                                 >
                             </div>
                             <div _ngcontent-psj-c50="" className="col-md-6 p-1 mb-1">
@@ -208,6 +210,21 @@ export default class AuthorShip extends ProtectedResource<ProtectedResourceProps
                                     QmPP8X2rWc2uanbnKpxfzEAAuHPuThQRtxpoY8CYVJxDj8</a
                                 >
                             </div>
+
+                            <div _ngcontent-psj-c50="" className="col-md-6 p-1 mb-1">
+                                <button
+                                    type="button"
+                                    className="btn btn-info m-2"
+                                    data-toggle="modal"
+                                    data-target="#exampleModalCenter"
+                                    onClick={(id) => this.showProofCredentialModal(this)}
+                                >
+                                    Show Proof
+                                </button>
+                                <ProofModal authResponse={this.getAuthResponse()} show={this.state.showProofCredentialModal}
+                                                     onCloseClicked={() => this.hideProofCredentialModal(this)}/>
+                            </div>
+
                             <div className="col-md-6 p-1 mb-1">
                             </div>
                         </div>
@@ -268,19 +285,19 @@ export default class AuthorShip extends ProtectedResource<ProtectedResourceProps
                         </div>
                     </div>
                     <h3 _ngcontent-psj-c51="" className="mt-4">
-                        Reuse License Verifiable Credential
+                        Show Channel Owner from authentication
                     </h3>
                     <button
                         type="button"
                         className="btn btn-info m-2"
                         data-toggle="modal"
                         data-target="#exampleModalCenter"
-                        onClick={(id) => this.showModal(this)}
+                        onClick={(id) => this.showOwnerCredentialModal(this)}
                     >
-                        Get Reuse License Verifiable Credential
+                        Show Owner
                     </button>
-                    <CredentialsModal authResponse={this.getAuthResponse()} show={this.state.showCredentialsModal}
-                                      onCloseClicked={() => this.hideModal(this)}/>
+                    <ShowCredentialModal authResponse={this.getAuthResponse()} show={this.state.showOwnerCredentialModal}
+                                      onCloseClicked={() => this.hideOwnerCredentialModal(this)}/>
                 </Container>
             )
         } else {
@@ -288,11 +305,19 @@ export default class AuthorShip extends ProtectedResource<ProtectedResourceProps
         }
     }
 
-    private showModal(thiz: any) {
-        thiz.setState({showCredentialsModal: true})
+    private showOwnerCredentialModal(thiz: any) {
+        thiz.setState({showOwnerCredentialModal: true})
     }
 
-    private hideModal(thiz: any) {
-        thiz.setState({showCredentialsModal: false})
+    private hideOwnerCredentialModal(thiz: any) {
+        thiz.setState({showOwnerCredentialModal: false})
+    }
+
+    private showProofCredentialModal(thiz: any) {
+        thiz.setState({showProofCredentialModal: true})
+    }
+
+    private hideProofCredentialModal(thiz: any) {
+        thiz.setState({showProofCredentialModal: false})
     }
 }
